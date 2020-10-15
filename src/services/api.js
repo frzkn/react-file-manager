@@ -6,7 +6,6 @@ export const getToken = () => {
 
 export const api = axios.create({
   baseURL: "https://interview.skizzle.email",
-  timeout: 1000,
 });
 
 api.interceptors.request.use(
