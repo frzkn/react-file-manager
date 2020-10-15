@@ -6,7 +6,6 @@ import { clearError, loginUser } from "../../../redux/actions";
 import { setToken } from "../../../utils";
 import "../auth.scss";
 
-
 function Login() {
   const [shouldShowErrors, setShouldShowErrors] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -27,55 +26,61 @@ function Login() {
   }, [dispatch]);
 
   return (
-
-<>
-    <div style={{ marginTop: "100px", padding: " 0 1rem" }}>
-      <p
+    <>
+      <div
         style={{
-          fontSize: "1rem",
+          marginTop: "100px",
+          padding: " 0 1rem",
+          display: "grid",
+          placeItems: "center",
         }}
       >
-        Please login to continue.
-      </p>
+        <p
+          style={{
+            fontSize: "1rem",
+          }}
+        >
+          Please login to continue.
+        </p>
 
-      {shouldShowErrors && <p style={{ color: "red" }}>{error}</p>}
-      <Formik
-        initialValues={{ username: "", password: "" }}
-        validate={(values) => {
-          const errors = {};
-          if (!values.username) {
-            errors.username = "Required";
-          }
-          return errors;
-        }}
-        onSubmit={async (values ) => {
-          dispatch(loginUser(values));
-          setSubmitted(true);
-          setShouldShowErrors(true);
-        }}
-      >
-        {({ isSubmitting }) => (
-          <Form>
-            <p>Username</p>
-            <Field type="text" name="username" className="input" />
-            <ErrorMessage name="username" component="div" />
-            <p>Password</p>
-            <Field type="password" name="password" className="input" />
-            <ErrorMessage name="password" component="div" />
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="submit-button"
-            >
-              {isSubmitting ? `Please wait` : `Submit`}
-            </button>
-          </Form>
-        )}
-      </Formik>
-      <p>
-        Need an account?<Link to="/register"> Sign up here</Link>
-      </p>
-    </div>
+        {shouldShowErrors && <p style={{ color: "red" }}>{error}</p>}
+        <Formik
+          initialValues={{ username: "", password: "" }}
+          validate={(values) => {
+            const errors = {};
+            if (!values.username) {
+              errors.username = "Required";
+            }
+            return errors;
+          }}
+          onSubmit={async (values) => {
+            dispatch(loginUser(values));
+            setSubmitted(true);
+            setShouldShowErrors(true);
+          }}
+        >
+          {({ isSubmitting }) => (
+            <Form>
+              <p>Username</p>
+              <Field type="text" name="username" className="input" />
+              <ErrorMessage name="username" component="div" />
+              <p>Password</p>
+              <Field type="password" name="password" className="input" />
+              <ErrorMessage name="password" component="div" />
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="submit-button"
+              >
+                {isSubmitting ? `Please wait` : `Submit`}
+              </button>
+            </Form>
+          )}
+        </Formik>
+        <p>
+          Need an account?<Link to="/register"> Sign up here</Link>
+        </p>
+      </div>
     </>
   );
 }

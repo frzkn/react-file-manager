@@ -26,7 +26,14 @@ function Register() {
   }, [dispatch]);
 
   return (
-    <div style={{ marginTop: "100px", padding: " 0 1rem" }}>
+    <div
+      style={{
+        marginTop: "100px",
+        padding: " 0 1rem",
+        display: "grid",
+        placeItems: "center",
+      }}
+    >
       <p
         style={{
           fontSize: "1rem",
