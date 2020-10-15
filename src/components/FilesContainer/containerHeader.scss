@@ -1,0 +1,43 @@
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1rem;
+  &--title {
+    padding: 0rem 2rem;
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+  }
+  &--toggle-layout {
+    display: flex;
+    padding-right: 15;
+    margin-left: auto;
+    font-weight: bold;
+    & > .span {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      padding: 0 0.5rem;
+      border-radius: 8px;
+      margin-right: 0.5rem;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+    }
+    & > .span--active {
+      background-color: rgba(35, 91, 221, 0.815);
+      color: white;
+    }
+    & > p {
+      padding-left: 1rem;
+      opacity: 0.2;
+    }
+  }
+}
+
+.title {
+  padding-left: 0.5rem;
+  font-size: 1rem;
+  margin: 0.75rem 0.5rem;
+}

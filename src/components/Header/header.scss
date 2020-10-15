@@ -1,0 +1,63 @@
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  // background-color: rgb(32,56,221);
+  background-color: rgb(35,91,221);
+  padding: 0.25rem 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  .header {
+    margin: 0 auto;
+    flex-direction: row;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    &__logo {
+      flex-direction: row;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.25rem 0.75rem;
+      border-radius: 8px;
+      transition: 0.2s all linear;
+      text-decoration: none;
+      &:hover {
+        background-color: rgba(35,91,221, 0.5);
+      }
+    }
+    &__logo > svg {
+      height: 1.52rem;
+      width: 1.52rem;
+    }
+    &__logo > h1 {
+      color: white;
+      margin-left: 10px;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 20px;
+      transition: 0.2s color linear;
+      cursor: pointer;
+    }
+    &__links {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.20rem 0.75rem;
+      border-radius: 8px;
+      transition: 0.2s all linear;
+      &:hover {
+        background-color: rgba(55,121,241, 0.5);
+      }
+    }
+    &__links > * {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}

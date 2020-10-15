@@ -1,0 +1,16 @@
+.grid-view {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 150px));
+  grid-auto-rows: 150px;
+  row-gap: 10px;
+}
+
+.load-more {
+  margin: 2rem;
+  background: #f3f3f3;
+  border: 0px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+}
