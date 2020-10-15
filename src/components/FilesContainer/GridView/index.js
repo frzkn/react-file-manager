@@ -19,7 +19,7 @@ const GridView = (props) => {
           history={history}
         />
       ))}
-      {data.next &&
+      {/* {data.next &&
         Array.isArray(data.results) &&
         data.results.length && (
           <button
@@ -28,7 +28,7 @@ const GridView = (props) => {
           >
             LOAD MORE
           </button>
-        )}
+        )} */}
     </div>
   );
 };

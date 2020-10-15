@@ -18,7 +18,7 @@ const FilesContainer = () => {
     results: [],
   });
   const [showAddFileModal, setShowAddFileModal] = useState(false);
-  const [gridView, setGridView] = useState(false);
+  const [gridView, setGridView] = useState(true);
   const { update } = useSelector((s) => s.auth);
   const history = useHistory();
   const dispatch = useDispatch();

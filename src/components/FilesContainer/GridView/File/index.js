@@ -29,7 +29,7 @@ const File = (props) => {
 
   return folder ? (
     <div
-      onClick={() => setHighlight(true)}
+      onClick={navigate}
       onDoubleClick={navigate}
       onTouchEnd={navigate}
       ref={ref}

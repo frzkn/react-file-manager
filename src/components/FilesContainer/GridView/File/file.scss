@@ -10,7 +10,8 @@
   align-items: center;
   transition: 0.25s linear background-color;
   background-color: white;
-  &--highlight {
+  &:hover {
+    background-color: #ebf4ff;
   }
   &--text-container {
     text-align: center;

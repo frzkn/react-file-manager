@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Link, Route, Switch, useHistory } from "react-router-dom";
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import "../auth.scss";
-import { clearError, registerUser } from "../../../redux/actions";
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link, useHistory } from "react-router-dom";
+import { clearError, registerUser } from "../../../redux/actions";
 import { setToken } from "../../../utils";
+import "../auth.scss";
 
 function Register() {
   const [shouldShowErrors, setShouldShowErrors] = useState(false);
@@ -26,7 +26,7 @@ function Register() {
   }, [dispatch]);
 
   return (
-    <div style={{ marginTop: "100px", padding: " 0 2rem" }}>
+    <div style={{ marginTop: "100px", padding: " 0 1rem" }}>
       <p
         style={{
           fontSize: "1rem",

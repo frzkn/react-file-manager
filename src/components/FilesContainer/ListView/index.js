@@ -13,7 +13,7 @@ const ListView = (props) => {
         <span className="list-row list-row--header">
         <span >Name</span>
         <span >author</span>
-        <span >date</span>
+        <span >Created</span>
         </span>
         {renderData.map((item, index) => (
           <File
@@ -26,7 +26,7 @@ const ListView = (props) => {
         ))}
       </div>
 
-      <div className="load-more">
+      {/* <div className="load-more">
         {data.next &&
           Array.isArray(data.results) &&
           data.results.length && (
@@ -34,7 +34,7 @@ const ListView = (props) => {
               LOAD MORE 
             </button> 
            )}
-      </div>
+      </div> */}
     </>
   );
 };

@@ -29,7 +29,7 @@ function Login() {
   return (
 
 <>
-    <div style={{ marginTop: "100px", padding: " 0 2rem" }}>
+    <div style={{ marginTop: "100px", padding: " 0 1rem" }}>
       <p
         style={{
           fontSize: "1rem",

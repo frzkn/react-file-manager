@@ -12,6 +12,7 @@ const File = (props) => {
     created_date: date = "",
     file = "",
     history = {},
+    index = 0,
   } = props;
 
   const [highlight, setHighlight] = useState(false);
@@ -25,8 +26,10 @@ const File = (props) => {
     history.push(`${history.location.pathname}${name.slice(0, 8)}?id=${id}/`);
   };
 
+  const isEven = index % 2 === 0
+
   return folder ? (
-    <div className="list-row" onClick={navigate}>
+    <div className={`list-row ${isEven ? 'even-row': ''}`} onClick={navigate}>
       <span>
         <span className="name">
           <svg
@@ -42,10 +45,10 @@ const File = (props) => {
         </span>
       </span>
       <span>{user.username}</span>
-      <span>{date}</span>
+      <TimeAgo date={date}></TimeAgo> 
     </div>
   ) : (
-    <a href={file} className="list-row" download>
+    <a href={file} className={`list-row ${isEven ? 'even-row' : ''}`} download>
       <span className="name">
         <svg
           height={"1.5rem"}
@@ -63,50 +66,9 @@ const File = (props) => {
         {name}
       </span>
       <span>{user.username}</span>
-
-          {/* <TimeAgo date={date}></TimeAgo> by{" "} */}
+      <TimeAgo date={date}></TimeAgo> 
     </a>
   );
 };
-
-//   return folder ? (
-//     <div
-//       onClick={() => setHighlight(true)}
-//       onDoubleClick={navigate}
-//       onTouchEnd={navigate}
-//       ref={ref}
-//       className={`single-file ${highlight ? "single-file--highlight" : ""}`}
-//     >
-//       <div>
-//         <FolderSvg />
-//       </div>
-//       <div className="single-file--text-container">
-//         <p class="single-file--text-container--title">
-//           {name.length > 45 ? `${name.slice(0, 45)}...` : name}
-//         </p>
-//         <p className="single-file--text-container--subtitle">
-//           created <TimeAgo date={date}></TimeAgo> by{" "}
-//           <span>{user.username}</span>
-//         </p>
-//       </div>
-//     </div>
-//   ) : (
-//     <a href={file} download ref={ref} className="single-file">
-//       <div>
-//         <FileSvg />
-//       </div>
-//       <div className="single-file--text-container">
-//         <p className="single-file--text-container--title">
-//           {name.length > 45 ? `${name.slice(0, 45)}...` : name}
-//         </p>
-
-//         <p className="single-file--text-container--subtitle">
-//           created <TimeAgo date={date}></TimeAgo> by{" "}
-//           <span>{user.username}</span>
-//         </p>
-//       </div>
-//     </a>
-//   );
-// };
 
 export default File;
