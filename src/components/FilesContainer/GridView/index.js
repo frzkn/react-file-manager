@@ -19,16 +19,6 @@ const GridView = (props) => {
           history={history}
         />
       ))}
-      {/* {data.next &&
-        Array.isArray(data.results) &&
-        data.results.length && (
-          <button
-            onClick={loadMore}
-            className="grid-load-more"
-          >
-            LOAD MORE
-          </button>
-        )} */}
     </div>
   );
 };

@@ -25,16 +25,6 @@ const ListView = (props) => {
           />
         ))}
       </div>
-{/* 
-      <div className="load-more">
-        {data.next &&
-          Array.isArray(data.results) &&
-          data.results.length && (
-            <button onClick={loadMore} className="load-more--btn black">
-              LOAD MORE 
-            </button> 
-           )}
-      </div> */}
     </>
   );
 };

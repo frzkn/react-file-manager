@@ -30,7 +30,6 @@ const File = (props) => {
   return folder ? (
     <div
       onClick={navigate}
-      onDoubleClick={navigate}
       onTouchEnd={navigate}
       ref={ref}
       className={`single-file ${highlight ? "single-file--highlight" : ""}`}
