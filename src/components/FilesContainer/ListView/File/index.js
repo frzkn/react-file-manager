@@ -48,7 +48,10 @@ const File = (props) => {
       <TimeAgo date={date}></TimeAgo> 
     </div>
   ) : (
-    <a href={file} className={`list-row ${isEven ? 'even-row' : ''}`} download>
+    <a href={file} className={`list-row ${isEven ? 'even-row' : ''}`} download
+      target="_blank"
+      rel="noreferrer noopener"
+    >
       <span className="name">
         <svg
           height={"1.5rem"}

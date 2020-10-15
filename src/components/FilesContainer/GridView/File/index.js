@@ -48,7 +48,14 @@ const File = (props) => {
       </div>
     </div>
   ) : (
-    <a href={file} download ref={ref} className="single-file">
+    <a
+      href={file}
+      download
+      ref={ref}
+      className="single-file"
+      target="_blank"
+      rel="noreferrer noopener"
+    >
       <div>
         <FileSvg />
       </div>
