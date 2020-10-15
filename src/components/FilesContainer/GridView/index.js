@@ -13,7 +13,7 @@ const GridView = (props) => {
     >
       {renderData.map((item) => (
         <File
-          key={item}
+          key={JSON.stringify(item)}
           {...item}
           pathname={history.location.pathname.split("/").filter(Boolean)}
           history={history}

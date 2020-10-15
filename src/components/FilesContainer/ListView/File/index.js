@@ -41,7 +41,7 @@ const File = (props) => {
           >
             <path d="M2 6a2 2 0 012-2h5l2 2h5a2 2 0 012 2v6a2 2 0 01-2 2H4a2 2 0 01-2-2V6z" />
           </svg>
-          {name}
+          {name.length > 15 ? `${name.slice(0, 15)}...` : name}
         </span>
       </span>
       <span>{user.username}</span>
@@ -63,7 +63,7 @@ const File = (props) => {
             clipRule="evenodd"
           />
         </svg>
-        {name}
+          {name.length > 15 ? `${name.slice(0, 15)}...` : name}
       </span>
       <span>{user.username}</span>
       <TimeAgo date={date}></TimeAgo> 

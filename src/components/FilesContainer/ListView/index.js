@@ -17,7 +17,7 @@ const ListView = (props) => {
         </span>
         {renderData.map((item, index) => (
           <File
-            key={item}
+            key={JSON.stringify(item)}
             {...item}
             pathname={history.location.pathname.split("/").filter(Boolean)}
             history={history}
@@ -25,8 +25,8 @@ const ListView = (props) => {
           />
         ))}
       </div>
-
-      {/* <div className="load-more">
+{/* 
+      <div className="load-more">
         {data.next &&
           Array.isArray(data.results) &&
           data.results.length && (

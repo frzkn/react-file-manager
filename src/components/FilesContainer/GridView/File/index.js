@@ -40,7 +40,7 @@ const File = (props) => {
       </div>
       <div className="single-file--text-container">
         <p class="single-file--text-container--title">
-          {name.length > 45 ? `${name.slice(0, 45)}...` : name}
+          {name.length > 15 ? `${name.slice(0, 15)}...` : name}
         </p>
         <p className="single-file--text-container--subtitle">
           created <TimeAgo date={date}></TimeAgo> by{" "}
@@ -55,7 +55,7 @@ const File = (props) => {
       </div>
       <div className="single-file--text-container">
         <p className="single-file--text-container--title">
-          {name.length > 45 ? `${name.slice(0, 45)}...` : name}
+          {name.length > 15 ? `${name.slice(0, 15)}...` : name}
         </p>
 
         <p className="single-file--text-container--subtitle">
