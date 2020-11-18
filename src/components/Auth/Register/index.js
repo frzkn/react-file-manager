@@ -28,10 +28,13 @@ function Register() {
   return (
     <div
       style={{
-        marginTop: "100px",
-        padding: " 0 1rem",
-        display: "grid",
-        placeItems: "center",
+          marginTop: "100px",
+          padding: "0 0.5rem",
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          maxWidth: '420px',
+          margin: '100px auto',
       }}
     >
       <p

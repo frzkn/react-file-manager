@@ -19,8 +19,8 @@ const Header = () => {
           {(getToken() || hasToken) && (
             <Link to="/login" style={{ display: "flex", alignItems: "center" }}>
               <svg
-                height={"1.52rem"}
-                width={"1.52rem"}
+                height={"2.2rem"}
+                width={"2.2rem"}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"

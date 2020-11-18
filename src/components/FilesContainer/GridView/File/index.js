@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import TimeAgo from "react-timeago";
-import useOnClickOutside from "use-onclickoutside";
 import FileSvg from "../../../../assets/svg/file";
 import FolderSvg from "../../../../assets/svg/folder";
 import "./file.scss";
@@ -16,12 +15,7 @@ const File = (props) => {
     history = {},
   } = props;
 
-  const [highlight, setHighlight] = useState(false);
-  const ref = useRef(null);
 
-  useOnClickOutside(ref, () => {
-    setHighlight(false);
-  });
 
   const navigate = () => {
     history.push(`${history.location.pathname}${name.slice(0, 8)}?id=${id}/`);
@@ -31,8 +25,7 @@ const File = (props) => {
     <div
       onClick={navigate}
       onTouchEnd={navigate}
-      ref={ref}
-      className={`single-file ${highlight ? "single-file--highlight" : ""}`}
+      className={`single-file`}
     >
       <div>
         <FolderSvg />
@@ -51,7 +44,6 @@ const File = (props) => {
     <a
       href={file}
       download
-      ref={ref}
       className="single-file"
       target="_blank"
       rel="noreferrer noopener"

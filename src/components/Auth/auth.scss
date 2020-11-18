@@ -10,11 +10,12 @@
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.57rem;
   font-size: 1rem;
   line-height: 1.5;
   width: 100%;
-  min-width: 320px;
+  // max: 320px;
+  display: block;
 }
 
 .submit-button {

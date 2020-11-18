@@ -31,8 +31,9 @@
       }
     }
     &__logo > svg {
-      height: 1.52rem;
-      width: 1.52rem;
+      display: block;
+      height: 3.0rem;
+      width: 3.0rem;
     }
     &__logo > h1 {
       color: white;
